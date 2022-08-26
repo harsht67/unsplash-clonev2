@@ -41,7 +41,7 @@ const useFetchData = (pageNumber) => {
 
         axios({
             method: "GET",
-            url: preURL+`photos?page=${pageNumber}&client_id=6FwjynLcZYVVjDDvsN_Ls-2mWKJrAlirkzoBG00JioU&count=10`+sufURL
+            url: preURL+`photos?page=${pageNumber}&client_id=${process.env.REACT_APP_ACCESS_KEY}&count=10`+sufURL
         })
             .then(res => {
                 let result = search ? res.data.results : res.data 

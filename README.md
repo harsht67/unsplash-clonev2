@@ -16,7 +16,7 @@
 - Search 
 - Filter (topics)
 
-## Note
+## Notes
 - Typescript is only used till Header component
 - Home component is built using Javascript 
 - I tried using Typescript but was getting errors & bugs mostly due to API & external libraries used
