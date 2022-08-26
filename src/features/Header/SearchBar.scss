@@ -1,0 +1,44 @@
+@use '../../scss/utils/' as *;
+
+.SearchBar {
+    width: 100%;
+    background-color: #eeeeee;
+    border-radius: 2rem;
+    border: 1px solid transparent;
+    padding: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #777777;
+
+    &:focus-within, &:hover {
+        border-color: #cacaca;
+    }
+
+    input {
+        border: none;
+        outline: none;
+        background-color: transparent;
+        font-size: inherit;
+        width: 100%;
+
+        &::placeholder {
+            opacity: 0.4;
+        }
+
+    }
+
+    .icons {
+        font-size: 1.5rem;
+        
+        &:nth-of-type(2) {
+            cursor: pointer;
+
+            &:hover {
+                color: red;
+            }
+            
+        }
+    }
+
+}

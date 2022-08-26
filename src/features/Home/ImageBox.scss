@@ -1,0 +1,58 @@
+.ImageBox {
+
+    .ImageBox__header {
+        padding: 0.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        img {
+            border-radius: 50%;
+        }
+
+    }
+
+    .ImageBox__footer {
+        padding: 0.5rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        div {
+            padding: 0 0.5rem;
+            display: flex;
+            align-items: center;
+            height: 2rem;
+            border: 1px solid #cacaca;
+            border-radius: 4px;
+            color: #777777;
+            cursor: pointer;
+
+            &:hover {
+                color: #000;
+                border-color: #000;
+            }
+
+            .icons {
+                font-size: 1.25rem;
+            }
+
+        }
+
+        div:nth-child(3) {
+            margin-left: auto;
+
+            span {
+                border-inline-end: 1px solid #000;
+                border-color: inherit;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                padding-inline-end: 0.5rem;
+                margin-inline-end: 0.5rem;    
+            }
+        } 
+
+    }
+
+}

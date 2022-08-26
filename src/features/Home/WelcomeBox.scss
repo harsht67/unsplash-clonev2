@@ -1,0 +1,80 @@
+@use '../../scss/utils' as *;
+
+.WelcomeBoxSearch {
+    text-transform: capitalize;
+    padding: 1rem;
+    margin-block-end: 1rem;
+}
+
+.WelcomeBox {
+    position: relative;
+    padding: 1rem;
+    height: 250px;
+    background-size: cover;
+    margin-block-end: 2rem;
+    color: #fff;
+
+    .WelcomeBox__main {
+        display: flex;
+        flex-flow: column;
+        gap: 1.25rem;
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+
+        > :nth-child(3) {
+            border-radius: 0.25rem;
+        }
+
+        > :nth-child(3), :nth-child(4) {
+            display: none;
+        }
+
+    }
+
+    .WelcomeBox__main2 {
+        position: absolute;
+        top: 50%;
+        // left: 50%;
+        transform: translate(0, -50%);
+        text-transform: capitalize;
+    }
+
+    .WelcomeBox__footer {
+        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 1rem;
+        opacity: 0.9;
+
+        > * {
+            width: 40%;
+        }
+
+    }
+
+    @include mq(lg) {
+        height: 500px;
+
+        .WelcomeBox__main {
+            width: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            > :nth-child(3) {
+                display: flex;
+            } 
+            > :nth-child(4) {
+                display: initial;
+            }
+        }
+
+        .WelcomeBox__footer {
+            display: flex;
+        }
+
+    }
+
+}

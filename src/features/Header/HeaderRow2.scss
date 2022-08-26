@@ -1,0 +1,118 @@
+@use '../../scss/utils/' as *;
+
+.HeaderRow2 {
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+
+    @include mq(lg) {   
+        padding: 0 1rem;
+    }
+
+    .nav--active {
+        color: #000;
+        border-color: #000 !important;
+    }
+
+    .nav--feat {
+        &::before {
+            content: "Featured";
+            font-size: 0.7em;
+            position: absolute;
+            top: 1.5px;
+        }
+    }
+
+    .HeaderRow2__focusNav {
+        display: none;
+
+        hr {
+            opacity: 0.7;
+        }
+
+        @include mq(lg) {
+            display: flex;
+            gap: 1.5rem;
+            margin-inline-end: 0.5rem;
+
+            span {
+                display: block;
+                padding-block: 1rem;
+                cursor: pointer;
+                border-block-end: 2px solid transparent;
+            }
+
+        }
+
+    }
+
+    .HeaderRow2__nav {
+        position: relative;
+        overflow: hidden;
+
+        .HeaderRow2__nav__btn {
+            display: none;
+            position: absolute;
+            z-index: 10;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5rem;
+            cursor: pointer;
+
+            @include mq(lg) {
+                display: initial;
+            }
+
+        }
+
+        .HeaderRow2__nav__btn--left {
+            left: 0.5rem;
+            display: none;
+        }
+        .HeaderRow2__nav__btn--right {
+            right: 0.5rem;
+        }
+
+        .HeaderRow2__nav__content {
+            width: 100%;
+            overflow: scroll;
+            scrollbar-width: none;
+            mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0));
+        
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            ul {
+                display: flex;
+                
+                li { 
+                    flex-shrink: 0;
+                    position: relative;
+                    padding: 1rem 0;
+                    margin-inline: 1rem;
+                    cursor: pointer;
+                    border-block-end: 2px solid transparent;
+                    cursor: pointer;
+                    text-transform: capitalize;
+
+                    &:hover {
+                        color: #000;
+                    }
+                }
+                
+                @include mq(lg) {
+
+                    li:first-child {
+                        display: none;
+                    }
+                }
+
+            }
+
+        }
+        
+    }
+
+}

@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    transition: all 0.05s;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, arial;
+}

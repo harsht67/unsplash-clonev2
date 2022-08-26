@@ -1,0 +1,65 @@
+.ImageBox2 {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+
+    &:hover {
+        .ImageBox2__hover {
+            display: flex;
+        }
+    }
+
+    .ImageBox2__hover {
+        padding: 1rem;
+        position: absolute;
+        inset: 0;
+        background-color: rgba(#000, 0.2);
+        display: none;
+        flex-flow: column;
+        justify-content: space-between;
+
+        div:not(.User) {
+            border-radius: 4px;
+            height: 2.2rem;
+            width: fit-content;
+            padding-inline: 0.5rem;
+            display: flex;
+            align-items: center;
+            background-color: #f0f0f0;
+            color: #727272;
+            cursor: pointer;
+
+            .icons {
+                font-size: 1.25rem;
+            }
+
+            &:hover {
+                color: #000;
+            }
+
+        }
+
+        .User {
+            color: #f0f0f0;
+        }
+
+        section {
+            display: flex;
+            align-items: center;
+
+            &:nth-child(1) {
+                justify-content: flex-end;
+                gap: 1rem;
+            }
+
+            &:nth-child(2) {
+                justify-content: space-between;
+            }
+
+        }
+
+
+    }
+
+
+}
